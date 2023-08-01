@@ -1,7 +1,7 @@
 // src/componets/AddNoteHandler.tsx
 import React from "react";
 import { useDispatch } from "react-redux";
-import { addNote } from "../actions/notesActions";
+import { addNote } from "../store/notesReducer";
 
 const AddNoteHandler: React.FC = () => {
   const dispatch = useDispatch();

@@ -1,7 +1,12 @@
 // src/components/Note.tsx
 import React from "react";
 import { useDispatch } from "react-redux";
-import { editNote, archiveNote, unarchiveNote, removeNote } from "../actions/notesActions";
+import {
+  editNote,
+  archiveNote,
+  unarchiveNote,
+  removeNote,
+} from "../store/notesReducer";
 import { NoteData } from "../types";
 import { formatDate } from "../utils/utils";
 
