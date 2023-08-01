@@ -1,3 +1,4 @@
+// src/components/Note.tsx
 import React from "react";
 import { useDispatch } from "react-redux";
 import { editNote, archiveNote, unarchiveNote, removeNote } from "../actions/notesActions";
@@ -42,61 +43,61 @@ const Note: React.FC<NoteProps> = ({ note }) => {
   };
 
   return (
-    <tr className="border border-gray-300">
-      <td className="border border-gray-300 px-4 py-2">{formatDate(note.timeOfCreation)}</td>
-      <td className="border border-gray-300 px-4 py-2">
+    <tr className="text-center">
+      <td>{formatDate(note.timeOfCreation)}</td>
+      <td>
         {isEditing ? (
-          <>
+          <div className="flex">
             <input
               type="text"
+              className="w-full border border-gray-300 rounded px-3 py-2"
               value={editedContent}
               onChange={(e) => setEditedContent(e.target.value)}
-              className="border border-gray-300 px-2 py-1 rounded"
             />
             <button
+              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 ml-2"
               onClick={handleSaveNote}
-              className="bg-green-500 text-white px-2 py-1 rounded ml-2"
             >
               Save
             </button>
-          </>
+          </div>
         ) : (
           <div>{note.noteContent}</div>
         )}
       </td>
-      <td className="border border-gray-300 px-4 py-2">{note.category}</td>
-      <td className="border border-gray-300 px-4 py-2">
+      <td>{note.category}</td>
+      <td>
         {note.noteContent &&
           note.noteContent.match(/\d{1,2}\/\d{1,2}\/\d{4}/g)?.join(", ")}
       </td>
-      <td className="border border-gray-300 px-4 py-2">
+      <td className="flex justify-center items-center">
         {!note.archived && (
-          <>
+          <div>
             <button
+              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
               onClick={handleEditNote}
-              className="bg-blue-500 text-white px-2 py-1 rounded"
             >
               Edit
             </button>
             <button
+              className="bg-gray-500 text-white py-2 px-2 rounded hover:bg-gray-600 ml-2"
               onClick={handleArchiveNote}
-              className="bg-blue-500 text-white px-2 py-1 rounded ml-2"
             >
               Archive
             </button>
-          </>
+          </div>
         )}
         {note.archived && (
           <button
+            className="bg-green-500 text-white py-2 px-2 rounded hover:bg-green-600"
             onClick={handleUnarchiveNote}
-            className="bg-yellow-500 text-white px-2 py-1 rounded"
           >
             Unarchive
           </button>
         )}
         <button
+          className="bg-red-500 text-white py-2 px-2 rounded hover:bg-red-600 ml-2"
           onClick={handleRemoveNote}
-          className="bg-red-500 text-white px-2 py-1 rounded ml-2"
         >
           Remove
         </button>

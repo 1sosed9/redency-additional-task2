@@ -1,3 +1,4 @@
+// src/components/SummaryTable.tsx
 import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
@@ -15,20 +16,20 @@ const SummaryTable: React.FC = () => {
 
   return (
     <>
-      <tr className="border border-gray-300">
-        <td className="border border-gray-300 px-4 py-2">Task</td>
-        <td className="border border-gray-300 px-4 py-2">{getCategoryCount("Task", false)}</td>
-        <td className="border border-gray-300 px-4 py-2">{getCategoryCount("Task", true)}</td>
+      <tr>
+        <td className="text-center">Task</td>
+        <td className="text-center">{getCategoryCount("Task", false)}</td>
+        <td className="text-center">{getCategoryCount("Task", true)}</td>
       </tr>
-      <tr className="border border-gray-300">
-        <td className="border border-gray-300 px-4 py-2">Idea</td>
-        <td className="border border-gray-300 px-4 py-2">{getCategoryCount("Idea", false)}</td>
-        <td className="border border-gray-300 px-4 py-2">{getCategoryCount("Idea", true)}</td>
+      <tr>
+        <td className="text-center">Idea</td>
+        <td className="text-center">{getCategoryCount("Idea", false)}</td>
+        <td className="text-center">{getCategoryCount("Idea", true)}</td>
       </tr>
-      <tr className="border border-gray-300">
-        <td className="border border-gray-300 px-4 py-2">Random Thought</td>
-        <td className="border border-gray-300 px-4 py-2">{getCategoryCount("Random Thought", false)}</td>
-        <td className="border border-gray-300 px-4 py-2">{getCategoryCount("Random Thought", true)}</td>
+      <tr>
+        <td className="text-center">Random Thought</td>
+        <td className="text-center">{getCategoryCount("Random Thought", false)}</td>
+        <td className="text-center">{getCategoryCount("Random Thought", true)}</td>
       </tr>
     </>
   );

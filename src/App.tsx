@@ -1,3 +1,4 @@
+// src/App.tsx
 import React from "react";
 import AddNoteHandler from "./components/AddNoteHandler";
 import NotesList from "./components/NotesList";
@@ -11,10 +12,14 @@ const App: React.FC = () => {
       <table className="w-full border-collapse border border-gray-300 mt-8">
         <thead>
           <tr className="bg-gray-100">
-            <th className="border border-gray-300 py-2 px-4">Time of Creation</th>
-            <th className="border border-gray-300 py-2 px-4">Note Content</th>
-            <th className="border border-gray-300 py-2 px-4">Note Category</th>
-            <th className="border border-gray-300 py-2 px-4">Dates Mentioned</th>
+            <th className="border border-gray-300 py-2 px-4">
+              Time of Creation
+            </th>
+            <th className="border border-gray-300 py-2 px-4">Content</th>
+            <th className="border border-gray-300 py-2 px-4">Category</th>
+            <th className="border border-gray-300 py-2 px-4">
+              Dates Mentioned
+            </th>
             <th className="border border-gray-300 py-2 px-4">Actions</th>
           </tr>
         </thead>
@@ -25,7 +30,7 @@ const App: React.FC = () => {
       <table className="w-full border-collapse border border-gray-300 mt-8">
         <thead>
           <tr className="bg-gray-100">
-            <th className="border border-gray-300 py-2 px-4">Note Category</th>
+            <th className="border border-gray-300 py-2 px-4">Category</th>
             <th className="border border-gray-300 py-2 px-4">Active</th>
             <th className="border border-gray-300 py-2 px-4">Archived</th>
           </tr>

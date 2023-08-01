@@ -1,3 +1,4 @@
+// src/utils/utils.ts
 export const formatDate = (isoString: string) => {
     const date = new Date(isoString);
     const options: Intl.DateTimeFormatOptions = {

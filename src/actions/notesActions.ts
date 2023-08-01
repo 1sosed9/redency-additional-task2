@@ -1,3 +1,4 @@
+// src/actions/notesActions.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { NoteData } from "../types";
 

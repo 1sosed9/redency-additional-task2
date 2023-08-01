@@ -1,3 +1,4 @@
+// src/actions/types.ts
 import { NoteData } from '../types';
 
 export const ADD_NOTE = 'ADD_NOTE';
