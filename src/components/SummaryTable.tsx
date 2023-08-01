@@ -15,20 +15,20 @@ const SummaryTable: React.FC = () => {
 
   return (
     <>
-      <tr>
-        <td>Task</td>
-        <td>{getCategoryCount("Task", false)}</td>
-        <td>{getCategoryCount("Task", true)}</td>
+      <tr className="border border-gray-300">
+        <td className="border border-gray-300 px-4 py-2">Task</td>
+        <td className="border border-gray-300 px-4 py-2">{getCategoryCount("Task", false)}</td>
+        <td className="border border-gray-300 px-4 py-2">{getCategoryCount("Task", true)}</td>
       </tr>
-      <tr>
-        <td>Idea</td>
-        <td>{getCategoryCount("Idea", false)}</td>
-        <td>{getCategoryCount("Idea", true)}</td>
+      <tr className="border border-gray-300">
+        <td className="border border-gray-300 px-4 py-2">Idea</td>
+        <td className="border border-gray-300 px-4 py-2">{getCategoryCount("Idea", false)}</td>
+        <td className="border border-gray-300 px-4 py-2">{getCategoryCount("Idea", true)}</td>
       </tr>
-      <tr>
-        <td>Random Thought</td>
-        <td>{getCategoryCount("Random Thought", false)}</td>
-        <td>{getCategoryCount("Random Thought", true)}</td>
+      <tr className="border border-gray-300">
+        <td className="border border-gray-300 px-4 py-2">Random Thought</td>
+        <td className="border border-gray-300 px-4 py-2">{getCategoryCount("Random Thought", false)}</td>
+        <td className="border border-gray-300 px-4 py-2">{getCategoryCount("Random Thought", true)}</td>
       </tr>
     </>
   );

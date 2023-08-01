@@ -6,7 +6,6 @@ import Note from "./Note";
 const NotesList: React.FC = () => {
   const notes = useSelector((state: RootState) => state.notes);
 
-  
   return (
     <>
       {notes.map((note) => (

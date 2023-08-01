@@ -42,38 +42,64 @@ const Note: React.FC<NoteProps> = ({ note }) => {
   };
 
   return (
-    <tr>
-      <td>{formatDate(note.timeOfCreation)}</td>
-      <td>
+    <tr className="border border-gray-300">
+      <td className="border border-gray-300 px-4 py-2">{formatDate(note.timeOfCreation)}</td>
+      <td className="border border-gray-300 px-4 py-2">
         {isEditing ? (
           <>
             <input
               type="text"
               value={editedContent}
               onChange={(e) => setEditedContent(e.target.value)}
+              className="border border-gray-300 px-2 py-1 rounded"
             />
-            <button onClick={handleSaveNote}>Save</button>
+            <button
+              onClick={handleSaveNote}
+              className="bg-green-500 text-white px-2 py-1 rounded ml-2"
+            >
+              Save
+            </button>
           </>
         ) : (
           <div>{note.noteContent}</div>
         )}
       </td>
-      <td>{note.category}</td>
-      <td>
+      <td className="border border-gray-300 px-4 py-2">{note.category}</td>
+      <td className="border border-gray-300 px-4 py-2">
         {note.noteContent &&
           note.noteContent.match(/\d{1,2}\/\d{1,2}\/\d{4}/g)?.join(", ")}
       </td>
-      <td>
+      <td className="border border-gray-300 px-4 py-2">
         {!note.archived && (
           <>
-            <button onClick={handleEditNote}>Edit</button>
-            <button onClick={handleArchiveNote}>Archive</button>
+            <button
+              onClick={handleEditNote}
+              className="bg-blue-500 text-white px-2 py-1 rounded"
+            >
+              Edit
+            </button>
+            <button
+              onClick={handleArchiveNote}
+              className="bg-blue-500 text-white px-2 py-1 rounded ml-2"
+            >
+              Archive
+            </button>
           </>
         )}
         {note.archived && (
-          <button onClick={handleUnarchiveNote}>Unarchive</button>
+          <button
+            onClick={handleUnarchiveNote}
+            className="bg-yellow-500 text-white px-2 py-1 rounded"
+          >
+            Unarchive
+          </button>
         )}
-        <button onClick={handleRemoveNote}>Remove</button>
+        <button
+          onClick={handleRemoveNote}
+          className="bg-red-500 text-white px-2 py-1 rounded ml-2"
+        >
+          Remove
+        </button>
       </td>
     </tr>
   );

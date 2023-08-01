@@ -6,8 +6,6 @@ const AddNoteHandler: React.FC = () => {
   const dispatch = useDispatch();
   const [noteContent, setNoteContent] = React.useState("");
   const [category, setCategory] = React.useState("Task");
-  
-
 
   const handleAddNote = () => {
     if (noteContent.trim() === "") {
@@ -29,25 +27,36 @@ const AddNoteHandler: React.FC = () => {
   };
 
   return (
-    <div>
-      <label htmlFor="note-content">Note Content:</label>
+    <div className="mt-8">
+      <label htmlFor="note-content" className="mr-2">
+        Note Content:
+      </label>
       <input
         type="text"
         id="note-content"
         value={noteContent}
         onChange={(e) => setNoteContent(e.target.value)}
+        className="border border-gray-300 px-2 py-1 rounded"
       />
-      <label htmlFor="note-category">Category:</label>
+      <label htmlFor="note-category" className="mx-4">
+        Category:
+      </label>
       <select
         id="note-category"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
+        className="border border-gray-300 px-2 py-1 rounded"
       >
         <option value="Task">Task</option>
         <option value="Idea">Idea</option>
         <option value="Random Thought">Random Thought</option>
       </select>
-      <button onClick={handleAddNote}>Add Note</button>
+      <button
+        onClick={handleAddNote}
+        className="bg-blue-500 text-white px-2 py-1 rounded ml-2"
+      >
+        Add Note
+      </button>
     </div>
   );
 };
